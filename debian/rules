@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+
+###
+### Configuration, decide what to build
+###
+
+override_dh_autoreconf:
+	mkdir m4
+	dh_autoreconf
+
+override_dh_autoreconf_clean:
+	dh_autoreconf_clean
+	rm -rf m4
+
+override_dh_auto_configure:
+	dh_auto_configure -- --with-linux-dir="/usr/src/linux-headers-`uname -r`"
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp
+	mkdir -p debian/tmp/lib/firmware
+	mkdir -p debian/tmp/usr/share/abefw-omap4plus/scripts/
+	cp -a scripts/abe-fw-gen.sh debian/tmp/usr/share/abefw-omap4plus/scripts/
+	cp -a scripts/debian-abe-tool.sh debian/tmp/usr/share/abefw-omap4plus/scripts/
+	/bin/bash ./scripts/debian-abe-tool.sh
+	/bin/bash ./scripts/abe-fw-gen.sh
+	cp -a omap4_abe_new debian/tmp/lib/firmware
+
+%:
+	dh $@ --with quilt,autoreconf
+

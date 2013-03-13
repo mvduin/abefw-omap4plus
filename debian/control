@@ -1,0 +1,22 @@
+Source: abefw-omap4plus
+Section: misc
+Priority: optional
+Maintainer: TI OMAP Developers <tiomap-dev@lists.launchpad.net>
+Build-Depends:
+ debhelper (>= 8.1.2ubuntu2),
+ quilt (>= 0.48-7),
+ dh-autoreconf,
+ pkg-config,
+ asocfw-omap4plus
+Standards-Version: 3.9.2
+Vcs-Git: git://gitorious.org/ubuntu-omap/abefw-omap4plus.git
+Vcs-Browser: https://gitorious.org/ubuntu-omap/abefw-omap4plus
+
+Package: abefw-omap4plus
+Section: misc
+Architecture: any
+Depends:
+ ${misc:Depends}
+Description: tool and plugins for ABE / ASoC firmware
+ This package provides the environment for ABE / ASoC firmware compilation.
+

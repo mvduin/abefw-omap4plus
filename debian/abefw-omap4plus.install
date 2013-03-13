@@ -1,0 +1,4 @@
+usr/bin/* /usr/share/abefw-omap4plus/bin
+usr/lib/abe/*.so* /usr/share/abefw-omap4plus/lib/abe
+lib/firmware/*
+usr/share/abefw-omap4plus/scripts/*
