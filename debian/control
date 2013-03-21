@@ -7,7 +7,8 @@ Build-Depends:
  quilt (>= 0.48-7),
  dh-autoreconf,
  pkg-config,
- asocfw-omap4plus
+ asocfw-omap4plus,
+ linux-headers-ti-omap5
 Standards-Version: 3.9.2
 Vcs-Git: git://gitorious.org/ubuntu-omap/abefw-omap4plus.git
 Vcs-Browser: https://gitorious.org/ubuntu-omap/abefw-omap4plus
