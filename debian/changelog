@@ -1,3 +1,9 @@
+abefw-omap4plus (1.0.1-1) precise; urgency=low
+
+  * New upstream version
+
+ -- Xavier Boudet <x-boudet@ti.com>  Thu, 21 Mar 2013 13:59:30 +0100
+
 abefw-omap4plus (1.0.0-1) precise; urgency=low
 
   * Initial version 1.0.0
