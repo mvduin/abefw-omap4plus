@@ -1,0 +1,46 @@
+Index: abefw-omap4plus/scripts/abefw-omap4plus-hook
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ abefw-omap4plus/scripts/abefw-omap4plus-hook	2013-03-25 15:54:46.358587431 +0100
+@@ -0,0 +1,41 @@
++#!/bin/sh
++
++PREREQ=
++
++prereqs()
++{
++        echo "$PREREQ"
++}
++
++case $1 in
++# get pre-requisites
++prereqs)
++        prereqs
++        exit 0
++        ;;
++esac
++
++. /usr/share/initramfs-tools/hook-functions
++
++copy_exec /lib/firmware/omap4_abe_new
++#!/bin/sh
++
++PREREQ=
++
++prereqs()
++{
++        echo "$PREREQ"
++}
++
++case $1 in
++# get pre-requisites
++prereqs)
++        prereqs
++        exit 0
++        ;;
++esac
++
++. /usr/share/initramfs-tools/hook-functions
++
++copy_exec /lib/firmware/omap4_abe_new
++
