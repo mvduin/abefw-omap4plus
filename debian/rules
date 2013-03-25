@@ -19,11 +19,14 @@ override_dh_auto_install:
 	dh_auto_install --destdir=debian/tmp
 	mkdir -p debian/tmp/lib/firmware
 	mkdir -p debian/tmp/usr/share/abefw-omap4plus/scripts/
+	mkdir -p debian/tmp/usr/share/initramfs-tools/hooks
 	cp -a scripts/abe-fw-gen.sh debian/tmp/usr/share/abefw-omap4plus/scripts/
 	cp -a scripts/debian-abe-tool.sh debian/tmp/usr/share/abefw-omap4plus/scripts/
 	/bin/bash ./scripts/debian-abe-tool.sh
 	/bin/bash ./scripts/abe-fw-gen.sh
 	cp -a omap4_abe_new debian/tmp/lib/firmware
+	cp -a scripts/abefw-omap4plus-hook debian/tmp/usr/share/initramfs-tools/hooks/abefw-omap4plus
+	chmod a+x debian/tmp/usr/share/initramfs-tools/hooks/abefw-omap4plus
 
 %:
 	dh $@ --with quilt,autoreconf

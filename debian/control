@@ -17,7 +17,8 @@ Package: abefw-omap4plus
 Section: misc
 Architecture: any
 Depends:
- ${misc:Depends}
+ ${misc:Depends},
+ initramfs-tools
 Description: tool and plugins for ABE / ASoC firmware
  This package provides the environment for ABE / ASoC firmware compilation.
 
