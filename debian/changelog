@@ -1,3 +1,9 @@
+abefw-omap4plus (1.0.1-3) precise; urgency=low
+
+  * Fix typo
+
+ -- Xavier Boudet <x-boudet@ti.com>  Mon, 25 Mar 2013 16:27:38 +0100
+
 abefw-omap4plus (1.0.1-2) precise; urgency=low
 
   * Add hook to copy abe fw to initramfs
