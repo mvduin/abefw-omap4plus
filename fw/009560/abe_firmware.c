@@ -55,11 +55,15 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
-0x00009560,
-0x00002000,
-0x00001df8,
-0x00004000,
-0x00005640,
+
+/* header */
+0x00009560,	/* version number */
+0x00002000,	/* PMEM length in bytes */
+0x00001df8,	/* CMEM length in bytes */
+0x00004000,	/* DMEM length in bytes */
+0x00005640,	/* SMEM length in bytes */
+
+/* PMEM content */
 0x1600200f,
 0x0a000960,
 0x08200000,
@@ -2108,6 +2112,8 @@
 0x07800000,
 0x08400000,
 0x0a000000,
+
+/* CMEM content */
 0x00000000,
 0x00000000,
 0x00001000,
@@ -4026,6 +4032,8 @@
 0x00078cfe,
 0x00f61f52,
 0x0007712a,
+
+/* DMEM content */
 0x00000000,
 0x00000000,
 0x00000000,
@@ -8122,6 +8130,8 @@
 0x00000000,
 0x00000000,
 0x00000000,
+
+/* SMEM content */
 0x00000000,
 0x00000000,
 0x00000000,
